@@ -5,8 +5,10 @@ import {useState} from 'react'
 
 function App() {
 
+
   //false is title screen, true is the game
   const [state, setState] = useState(false)
+
 
   if(!state){
     return (

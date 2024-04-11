@@ -2,7 +2,7 @@
 const Card = (props) => {
   
   return(
-    <div className="card" onClick={props.onClick}>
+    <div className={"card card" + props.card} onClick={props.onClick}>
       <div className="picture-container"><img  src={props.picture} default-src="" alt="food" className="card-picture"/></div>
       <div className='card-title'><p className="title-text">{props.title}</p></div>
       <div className="card-description">

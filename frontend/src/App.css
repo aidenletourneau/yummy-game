@@ -68,8 +68,13 @@ body{
   transition: transform 0.2s ease-in-out;
 }
 
-.card:hover{
-  transform: rotate(20deg);
+
+
+.card1:hover{
+  transform: rotate(-20deg) scale(1.1);
+}
+.card2:hover{
+  transform: rotate(20deg) scale(1.1);
 }
 
 .picture-container {

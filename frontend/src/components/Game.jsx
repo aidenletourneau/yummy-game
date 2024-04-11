@@ -84,7 +84,7 @@ const Game = (props) => {
       // Customize your confetti here
       confetti({
         particleCount: 100,
-        spread: 70,
+        spread: 100,
         origin: { y: 0.6 }
       });
     };
@@ -107,6 +107,7 @@ const Game = (props) => {
       {restaurants.length > 0 ? (
         <>
           <Card 
+            card="1"
             onClick={handleCard1} 
             picture={card1.image_url} 
             title={card1.name} 
@@ -115,6 +116,7 @@ const Game = (props) => {
             menu={card1.attributes.menu_url}/>
           <h1 className='or'>OR</h1>
           <Card 
+            card="2"
             onClick={handleCard2} 
             picture={card2.image_url} 
             title={card2.name} 

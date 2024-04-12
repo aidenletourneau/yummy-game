@@ -6,7 +6,14 @@ configDotenv();
 const app = express();
 
 app.listen(process.env.PORT, () => {
-  console.log('Listening on port', process.env.PORT);
+  console.log('Listening');
+});
+
+// cors stuff that allows requests from the vercel frontend
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
 });
 
 app.get('/api/restaurants/:lon/:lat', async (req, res) => {

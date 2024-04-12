@@ -51,7 +51,8 @@ const Game = (props) => {
         setCard1(updateRestaurants[0])
       }
       setWinner(card2)
-      return updateRestaurants;//returns the update restaurants array that the setter function setRestaurants needs
+      return updateRestaurants;
+      //returns the update restaurants array that the setter function setRestaurants needs
     });
   }
 
@@ -63,7 +64,8 @@ const Game = (props) => {
     const search = async () => {
       try {
         const [lat, lon] = await getLocation();
-        const response = await fetch(`/api/restaurants/${lon}/${lat}`);
+        const response = await fetch(`https://yummy-game.onrender.com/api/restaurants/${lon}/${lat}`);
+        console.log(response);
         if (!response.ok) throw new Error('Network response was not ok');
         const json = await response.json();
         setRestaurants(json.businesses);
